@@ -53,7 +53,7 @@ canonifyurls = true
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
   url = "/"
 [[menu.main]]
-  weight = 2
+  weight = 2 
   identifier = "categories"
   name = "Categories"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
@@ -65,41 +65,54 @@ canonifyurls = true
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
   url = "/tags"
 [[menu.main]]
-  weight = 4
+  weight = 4 
   identifier = "archives"
   name = "Archives"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
   url = "/archives"
 [[menu.main]]
   weight = 5
+  identifier = "search"
+  name = "search"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-search\"></i>"
+  url = "/#search"
+  class = "st-search-show-outputs"
+[[menu.main]]
+  weight = 6 
   identifier = "about"
   name = "About"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
   url = "/#about"
 
 [[menu.links]]
-  weight = 1
+  weight = 1 
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/alfieqashwa"
 
 [[menu.links]]
-  weight = 2
+  weight = 2 
   identifier = "youtube"
   name = "Youtube"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-youtube\"></i>"
   url = "https://www.youtube.com/channel/UCvVeX0v8qB-2AXnc_LnnkEw"
 
 [[menu.links]]
-  weight = 3
+  weight = 3 
   identifier = "instagram"
   name = "Instagram"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-instagram\"></i>"
   url = "https://instagram.com/alfieqashwa"
 
+[[menu.links]]
+  weight = 4
+  identifier = "soundcloud"
+  name = "SoundCloud"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-soundcloud\"></i>"
+  url = "https://soundcloud.com/alfieqashwa"
 [[menu.misc]]
-  weight = 1
+  weight = 1 
   identifier = "rss"
   name = "RSS"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
@@ -110,10 +123,10 @@ canonifyurls = true
   # You must use date format used by Go Time package https://golang.org/pkg/time/
   # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
   # Default format is: January 2, 2006 
-  # dateFormat = "2 January 2006"
+  dateFormat = "2 January 2006"
 
   # Global keywords configuration. Following keywords will be add to every pages
-  # keywords = ["development", "next-gen"]
+  keywords = ["development", "next-gen"]
 
   # Syntax highlighter, possible choice between: "highlight.js" (recommanded) and "prism.js" (experimental)
   # You can comment it to disable syntax highlighting
@@ -159,14 +172,14 @@ canonifyurls = true
   # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
   # Set this value to `right` if you have old posts to keep the old style on them
   # and define `thumbnailImagePosition` on a post to overwrite this setting
-  thumbnailImagePosition = "bottom"
+  thumbnailImagePosition = "right"
   # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
   # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
   # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
   autoThumbnailImage = true
 
   # Your favicon path, default is "/favicon.png"
-  favicon = "static/img/favicon.png"
+  favicon = "/img/favicon.png"
 
   # Header configuration
   # The link at the right of the header is customizable
@@ -210,13 +223,13 @@ canonifyurls = true
     url = "https://plus.google.com/share?url=%s"
 
   [params.header.rightLink]
-    class = ""
-    icon = ""
-    url = "/#about"
+    class = "open-algolia-search"
+    icon = "search"
+    url = "/#search"
 
   # Customize link of author avatar in sidebar
-  # [params.sidebar.profile]
-  #   url = "/#about"
+  [params.sidebar.profile]
+    url = "/#about"
 
   # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
   # [params.footer]
