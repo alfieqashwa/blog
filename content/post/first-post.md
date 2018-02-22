@@ -28,9 +28,7 @@ Kira-kira gitulah beberapa tujuan yang saat ini terlintas dalam benak.
 
 Internet tiada ubahnya seperti microphone, merupakaan media teknologi yang dapat di gunakan untuk meningkatkan intensitas suara adzan atau untuk memanipulasi khalayak rakyat jelata dalam program kampanye bagaimana cara mengkomoditaskan suara demokrasi. 
 
-Manusia jualah yang memberi value atau nilai terhadap teknologi yg diciptakan,
-
-...dari apa yang disuarakan.
+Manusia jualah yang memberi value atau nilai terhadap teknologi yg diciptakan, dari apa yang disuarakan.
 
 
 
