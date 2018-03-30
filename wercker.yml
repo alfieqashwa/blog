@@ -20,9 +20,9 @@ deploy:
         code: |
               apt-get update && apt-get install git -y
     - leipert/git-push:
-      gh_oauth: $GIT_TOKEN
-      basedir: public
-      clean_removed_files: true
-      branch: master
-      repo: alfieqashwa/alfieqashwa.github.io
-      gh_pages_domain:  circleq.cloud
+        gh_oauth: $GIT_TOKEN
+        basedir: public
+        clean_removed_files: true
+        branch: master
+        repo: alfieqashwa/alfieqashwa.github.io
+        gh_pages_domain:  circleq.cloud
