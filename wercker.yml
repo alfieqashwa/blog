@@ -1,8 +1,28 @@
 box: debian
 build:
   steps:
+    - script:
+        name: install git
+        code: |
+              apt-get update && apt-get install git -y
+    - script:
+        name: initialize git submodules
+        code: |
+              git submodule update --init --recursive
     - arjen/hugo-build:
-      version: "0.36"
-      theme: hugo-tranquilpeak-theme
-      config: config.toml
-      flags: --disableSitemap=true
+          version: "0.36"
+          theme: hugo-tranquilpeak-theme
+
+deploy:
+  steps:
+    - script:
+        name: install git
+        code: |
+              apt-get update && apt-get install git -y
+    - leipert/git-push:
+      gh_oauth: $GIT_TOKEN
+      basedir: public
+      clean_removed_files: true
+      branch: master
+      repo: alfieqashwa/alfieqashwa.github.io
+      gh_pages_domain:  circleq.cloud
