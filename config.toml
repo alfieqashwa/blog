@@ -33,7 +33,7 @@ canonifyurls = true
 [author]
   name = "Alfie Qashwa"
   bio = "Sentio Ergo Sum"
-  job = "Developer"
+  job = "Pemulung Ilmu"
   location = "Ciputat, Indonesia"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "alfieqashwa@gmail.com"

@@ -7,7 +7,6 @@ thumbnailImage: //res.cloudinary.com/alfieqashwa-github-io/image/upload/v1519014
 categories:
 - programming
 tags:
-- berandal
 - internet
 - opensource
 ---
