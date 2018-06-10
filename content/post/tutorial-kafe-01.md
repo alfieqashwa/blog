@@ -15,17 +15,17 @@ thumbnailImage: /img/kafe-business-process.jpg
 
 ## Pendahuluan
 
-Posting ini diperuntukkan khususnya untuk para user kafe & resto yang telah di training, baik kasir maupun back-office. Tujuannya sebagai dokumentasi tutorial sistem kafe untuk membantu para user / pengguna untuk memahami lebih baik, acuan pengingat manakala lupa, serta sebagai sharing-knowledge staf/user baru.
+Posting ini diperuntukkan untuk para user **Kafe & Resto** yang telah di training, khususnya back-office dan kasir. Tujuannya sebagai dokumentasi tutorial untuk membantu para _user_ atau pengguna untuk memahami lebih baik tentang bagaimana cara mengoperasikan sistem aplikasi ini.
 
-Sebagai pendahuluan, sistem ini merupakan teknologi [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") yang dapat di implementasikan secara online (cloud-base) maupun secara offline (LAN), berbasis web sehingga dapat dijalankan dengan browser apapun namun browser disarankan gunakan [Chrome](https://www.google.com/chrome/) atau [Firefox](https://www.mozilla.org/en-US/firefox/new/). Selama terinstall chrome browser pada pc, notebook, ipad, tablet, dan smartphone, user dapat menjalankan sistem ini.
+Sebagai pendahuluan, sistem aplikasi ini adalah berbasis teknologi [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") yang dapat di implementasikan baik secara *online (cloud-base)* maupun *offline (LAN)*. Sistem aplikasi ini berbasis web sehingga dapat dijalankan selama terinstall aplikasi browser seperti [Chrome](https://www.google.com/chrome/) atau [Firefox](https://www.mozilla.org/en-US/firefox/new/) pada __PC__, __Notebook__, __iPad__, __Tablet__, atau __SmartPhone__.
 
-Hal paling plus pada sistem berbasis teknologi [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") adalah sistem yang terintegrasi yang sangat sulit dimanipulasi dalam menelusuri track record atau jejak digital transaksi bisnis Anda, dari Purchase Management, Inventory Management & Stock Opname, Bill of Material / Ingredients,  Sale & Point of Sales, serta Akuntansi.
+Sistem berbasis teknologi [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") secara fundamental sifatnya saling terkait antar satu aplikasi dengan aplikasi lainnya sehingga data-data transaksi yang telah tercatat sangat sulit dimanipulasi atau dihilangkan karena *jejak-digital* transaksi-transaksi bisnis Anda saling __terintegrasi__ secara sistematis.
 
-Sebagai contoh, jika bisnis Anda memiliki beberapa cabang di berbagai daerah, maka Anda dapat memantau transaksi secara real-time serta melihat laporan dimanapun Anda berada (asal ada jaringan internet) tanpa Anda harus secara fisik berkunjung ke masing-masing toko cabang untuk memeriksa laporan keuangan Anda. Ibarat CCTV, sistem ini tidak dapat menangkap maling. Tetapi ia dapat dijadikan sebagai alat bukti valid manakala terjadi manipulasi yang dilakukan salah satu staff Anda, serta sangat efektif sebagai acuan preventif dalam mereduksi kecurangan-kecurangan transaksi.
+Secara umum, [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") terdiri dari modul-modul aplikasi **Purchase Management**, **Inventory & Stock Management**, **Manufacture / Bill of Material**, **Sales**, **CRM**, **Project Management** dan **Accounting & Finance**.
 
-Meski cakupan tutorial ini khusus membahas bisnis Kafe & Resto, namun sistem dapat di implementasikan dengan bisnis lain yang lebih rumit seperti konveksi, distro multi-cabang, travel, matrial, bengkel, rental, saloon, sekolah, dengan scope skala bisnis perusahaan kecil hingga menengah. Sistem ini pun terintegrasi hingga e-commerce, crm, project management, payroll, dan lain sebagainya yang kesemuanya dapat bermuara pada laporan accounting & financial.
+Beberapa sistem [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") terkenal yang mungkin familiar di telinga Anda adalah [SAP](https://www.sap.com/index.html "Systemanalyse und Programmentwicklung"), [Oracle ERP](https://www.oracle.com/applications/erp/index.html "Oracle-ERP"), dan [Micrososft Dynamics GP](https://dynamics.microsoft.com/en-us/gp-overview/ "Dynamics GP"). Ketiganya berbasis _closed-source_. Sedangkan sistem [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") lainnya yang berbasis _open-source_ diantaranya [InoERP](http://inoideas.org/ "PHP"), [ERPNext](https://erpnext.com/ "Python"), [Odoo](https://www.odoo.com/ "Python"), [Flectra](https://flectrahq.com/ "Python"), [Hexya](http://hexya.io/ "Golang"), dan lain sebagainya.
 
-Pada posting tersendiri suatu saat akan saya share lebi lanjut tentang sistem ERP ini dan bagaimana cara mengimplementasikannya, baik secara functional (dari sisi pengguna) maupun teknikal (dari sisi developer/programmer).
+Pada posting tersendiri akan saya share lebih lanjut tentang sistem [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise Resource Planning") yang saya gunakan dan bagaimana cara mengimplementasikan serta menggunakannya baik secara _functional_ (dari sisi user) maupun secara _technical_ (dari sisi developer/programmer).
 
 ---
 
@@ -33,14 +33,23 @@ Pada posting tersendiri suatu saat akan saya share lebi lanjut tentang sistem ER
 
 ## Bisnis Proses Kafe
 
-Sebagai Pemilik Kafe & Resto, tentu Anda ingin mengetahui kapan tepatnya segala transaksi pembelian dan penjualan terjadi, siapa pihak suplier maupun customer yang bertransaksi jual-beli dengan usaha Anda, berapa jumlah nominal transaksinya, produk apa yang di beli serta di jual serta berapa qty-nya, dan siapa staf Anda yang bertanggungjawab menginputnya.
-Lebih lanjut, tentu Anda ingin mengetahui lebih detil menu apa yang paling banyak terjual sehingga Anda dapat melakukan update strategi bisnis berdasarkan informasi tersebut. Anda pun ingin mengetahui berapa jumlah stock barang atau bahan-bahan makanan & minuman dalam gudang / dapur Anda, bahan-bahan apa saja yang tidak dapat terpakai atau tidak dapat digunakan lagi oleh sebab rusak, pecah, atau basi. Dan yang terakhir, tentu Anda ingin mengetahui laporan-laporan finansial Anda seperti income, expense, profit, dus lengkap dengan journal ledger serta balance sheet.
+Meskipun cakupan tutorial ini secara khusus hanya akan membahas bisnis **Kafe & Resto**, namun sistem aplikasi ini dapat di implementasikan dengan bisnis lain seperti _konveksi_, _distro multi-cabang_, *Travel*, *Rental*, *Salon*, *Sekolah*, baik bisnis skala UKM hingga skala perusahaan menengah serta *franchise*. Sistem ini pun terdiri dari modul-modul aplikasi lainnya seperti **E-Commerce**, **CRM**, **Project Management**, **HR & Payroll**, dan lain sebagainya yang keseluruhannya saling terintegrasi serta bermuara dengan modul **Accounting & Finance**.
 
-Secara garis besar, berikut merupakan bisnis proses sebuah Kafe & Restoran:
+Sebagai Pemilik Kafe & Resto tentu Anda ingin mengetahui kapan tepatnya segala transaksi pembelian serta penjualan terjadi dan berapa jumlah nominal transaksinya, siapa pihak suplier maupun customer yang berhubungan dengan bisnis Anda, produk apa yang di beli serta yang di jual dan berapa qty-nya berikut siapa user/staf yang bertanggungjawab dalam melakukan input data.
+
+Lebih lanjut tentu Anda ingin mengetahui secara detil menu-menu paling laku terjual, yang mana informasi tersebut dapat dijadikan acuan untuk menentukan strategi usaha Anda dalam meningkatkan penjualan yang lebih baik lagi.
+
+Anda pun ingin mengetahui berapa jumlah _stock_ barang atau bahan-bahan makanan & minuman dalam gudang / dapur Anda serta produk-produk mana yang tidak layak terpakai atau tidak dapat digunakan lagi oleh sebab rusak, pecah, dan basi atau _expired_. Dan yang terakhir, tentu Anda ingin mengetahui laporan-laporan finansial Anda seperti *income*, *expense*, profit, neraca keuangan, dan laporan lainnya.
+
+Jika bisnis Anda memiliki beberapa cabang di pelbagai daerah, Anda pun dapat memantau tiap transaksi bisnis secara real-time serta memeriksa laporan keuangan dimanapun Anda berada _selama ada akses jaringan internet_ tanpa harus berkunjung _secara fisik_ ke masing-masing cabang-cabang bisnis Anda. 
+
+>Ibarat **CCTV**, sistem aplikasi ini memang tidak dapat menangkap maling. Tetapi ia dapat dijadikan sebagai alat bukti _valid_ manakala terjadi manipulasi yang dilakukan salah satu pegawai Anda, serta sangat efektif sebagai acuan preventif dalam mereduksi kecurangan-kecurangan dalam transaksi bisnis suatu perusahaan.
+
+Secara garis besar, gambar berikut ini adalah bisnis proses sebuah **Kafe & Restoran** dari __Supplier__ --> __Inventory__ --> __Manufacture__ --> __Point of Sale__ --> __Customer__ yang keseluruhannya bermuara pada __Accounting & Finance__.
 
 ![Kafe Business Process](/img/kafe-business-process.jpg)
 
-Pada posting selanjutnya, akan dijelaskan contoh-contoh video tutorial berikut deskripsinya tentang bagaimana manager operasional dapat menggunakan sistem ini dari pembelian dan kasir melakukan transaksi penjualan serta bagaimana pemilik perusahaan / owner dapat melihat berbagai laporan transaksi dan mengecek laporan keuangan.
+Posting Part 2 & Part 3 akan disertakan video-video tutorial berikut deskripsi rinci tentang bisnis proses **Kafe & Resto**.
 
-Jika ingin mencoba sistem demo, sila buka [Demo Kafe](http://kafe.circleq.co/ "Demo Kafe")
- dan hubungi contact kami di [Circle\`Q](http://circleq.co/page/contactus "Contact Us") untuk mendapatkan akses user demo.
+Anda pun dapat mencoba __Demo Sistem Kafe & Resto__ di [Demo Kafe](http://kafe.circleq.co/ "Demo Kafe").
+Hubungi kami di [Circle\`Q](http://circleq.co/page/contactus "WA +62-812-8093-1980") untuk mendapatkan akses user demo atau hanya sekedar ingin berkonsultasi tentang bisnis Anda yang unik dan membahas permasalahan serta menemukan solusinya.
